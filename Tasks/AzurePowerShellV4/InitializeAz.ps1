@@ -78,6 +78,11 @@ if ($endpointObject.scheme -eq 'ServicePrincipal') {
             $null = Connect-AzAccount -ServicePrincipal -Tenant $endpointObject.tenantId `
             -Credential $psCredential `
             -Environment $environmentName -WarningAction SilentlyContinue
+
+            Write-Host "##[command]az login --service-principal -u $($endpointObject.servicePrincipalClientID)  -p $($endpointObject.servicePrincipalKey) --tenant $($endpointObject.tenantId)"
+            az login --service-principal -u $endpointObject.servicePrincipalClientID  -p $endpointObject.servicePrincipalKey --tenant $endpointObject.tenantId
+            Write-Host "Adding Env:servicePrincipalId to environment variables"
+            $Env:servicePrincipalId = $endpointObject.servicePrincipalClientID
         }
         else {
             # Provide an additional, custom, credentials-related error message. Will handle localization later

@@ -1,9 +1,8 @@
 {
-  "loc.friendlyName": "Azure PowerShell",
+  "loc.friendlyName": "Azure PowerShell with Azure cli",
   "loc.helpMarkDown": "[Learn more about this task](https://go.microsoft.com/fwlink/?LinkID=613749)",
   "loc.description": "Run a PowerShell script within an Azure environment",
   "loc.instanceNameFormat": "Azure PowerShell script: $(ScriptType)",
-  "loc.releaseNotes": "Added support for Az Module and cross platform agents.",
   "loc.group.displayName.AzurePowerShellVersionOptions": "Azure PowerShell version options",
   "loc.input.label.ConnectedServiceNameARM": "Azure Subscription",
   "loc.input.help.ConnectedServiceNameARM": "Azure Resource Manager subscription to configure before running PowerShell",

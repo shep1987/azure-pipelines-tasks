@@ -1,0 +1,43 @@
+{
+    "manifestVersion": 1,
+    "id": "AzurePowerShellAzCli",
+    "version": "0.1.13",
+    "name": "AzurePowerShellAzCli",
+    "publisher": "FISCALTechnologies",
+    "public": false,
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": [
+        "azure",
+        "az",
+        "cli",
+        "build",
+        "release"       
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "files": [
+        {
+            "path": "AzurePowerShellV4"
+        },
+        {
+            "path": "Common"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "azure-powershell-az-cli",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "AzurePowerShellV4"
+            }
+        }
+    ]
+}

@@ -1,26 +1,22 @@
 {
-  "id": "72A1931B-EFFB-4D2E-8FD8-F8472A07CB62",
-  "name": "AzurePowerShell",
+  "id": "1db17474-ea89-4895-ac17-89d73f0b9f45",
+  "name": "AzurePowerShellAzCli",
   "friendlyName": "ms-resource:loc.friendlyName",
   "description": "ms-resource:loc.description",
+  "author": "FISCAL Technologies",
   "helpMarkDown": "ms-resource:loc.helpMarkDown",
-  "category": "Deploy",
-  "visibility": [
-    "Build",
-    "Release"
-  ],
+  "category": "Utility",
   "runsOn": [
     "Agent",
     "DeploymentGroup"
   ],
-  "author": "Microsoft Corporation",
+  "demands": [],
   "version": {
-    "Major": 4,
-    "Minor": 157,
-    "Patch": 4
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 13
   },
-  "preview": true,
-  "releaseNotes": "ms-resource:loc.releaseNotes",
+  "minimumAgentVersion": "2.115.0",
   "groups": [
     {
       "name": "AzurePowerShellVersionOptions",
@@ -28,7 +24,7 @@
       "isExpanded": true
     }
   ],
-  "minimumAgentVersion": "2.115.0",
+  "instanceNameFormat": "ms-resource:loc.instanceNameFormat",
   "inputs": [
     {
       "name": "ConnectedServiceNameARM",
@@ -142,14 +138,7 @@
       "helpMarkDown": "ms-resource:loc.input.help.CustomTargetAzurePs"
     }
   ],
-  "instanceNameFormat": "ms-resource:loc.instanceNameFormat",
   "execution": {
-    "PowerShell3": {
-      "target": "azurepowershell.ps1",
-      "platforms": [
-        "windows"
-      ]
-    },
     "Node": {
       "target": "azurepowershell.js",
       "argumentFormat": ""
